@@ -10,7 +10,7 @@
   {"id":9, "Name":"Mr. Freeze", "Alignment":"Villain", "imageUrl": "img/crews/MrFreeze.jpg"},
   {"id":10, "Name":"Wonderland Gang", "Alignment":"Villain", "imageUrl": "img/crews/WonderlandGang.jpg"},
   {"id":11, "Name":"League of Assassins", "Alignment":"Villain", "imageUrl": "img/crews/LeagueOfAssassins.jpg"},
-  {"id":12, "Name":"Watchmen", "Alignment":"Hero", "imageUrl": "img/crews/Watchmen.jpg"},
+  {"id":12, "Name":"Watchmen", "Alignment":"Neutral", "imageUrl": "img/crews/Watchmen.jpg"},
   {"id":13, "Name":"Court of Owls", "Alignment":"Villain", "imageUrl": "img/crews/CourtOfOwls.jpg"},
   {"id":14, "Name":"Penguin", "Alignment":"Villain", "imageUrl": "img/crews/Penguin.jpg"}
 ]}

@@ -34,7 +34,7 @@
 <div>
     <div>
         <h5>Choose a crew: </h5>
-        <select ng-options="crew.Name for crew in crews track by crew.id | orderBy: 'Name'"
+        <select ng-options="crew.Name group by crew.Alignment for crew in crews | orderBy:['Alignment','Name'] track by crew.id"
                 ng-model="selectedCrew">
         </select>
     </div>
