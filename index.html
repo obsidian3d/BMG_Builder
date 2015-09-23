@@ -1,4 +1,4 @@
-<html ng-app="bmgApp" ng-controller="bmgAppCtrl">
+<html>
 <head lang="en">
     <meta charset="UTF-8">
     <title>BMG Crew Builder</title>
@@ -30,7 +30,7 @@
         width: 200px;
     }
 </style>
-
+<body ng-app="bmgApp" ng-controller="bmgAppCtrl">
 <div>
     <div>
         <h5>Choose a crew: </h5>
@@ -40,6 +40,13 @@
     </div>
 
     <table>
+
+        <h5>Filter character list:</h5>
+        <div>
+            <span class="glyphicon glyphicon-search"></span>
+            <input type="text" ng-model="searchInput">
+        </div>
+
         <tr>
             <td></td>
             <td>Name</td>
@@ -55,7 +62,7 @@
             <td>Endurance</td>
             <td>Special</td>
         </tr>
-        <tr ng-repeat="x in characters | orderBy: 'Alias'">
+        <tr ng-repeat="x in characters | filter:searchInput | orderBy: 'Alias'">
             <td>{{x.id}}</td>
             <!--<td><a href="../{{x.imageUrl}}" class="thumb"></a>Image</td>-->
             <td><a href="../{{x.imageUrl}}">{{x.Name}}</a></td>
