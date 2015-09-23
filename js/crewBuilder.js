@@ -3,14 +3,7 @@
  */
 app.controller('crewBuilderCtrl', function($scope, $http) {
 
-    $scope.selectedCrew;
     $scope.selectedCharacter;
-
-    $scope.setSelectedCrew = function(crew)
-    {
-        $scope.setSelectedCrew = crew;
-        alert(selectedCrew.Name + " clicked");
-    }
 
     $scope.setSelectedCharacter = function(character)
     {

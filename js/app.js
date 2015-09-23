@@ -13,4 +13,6 @@ app.controller('bmgAppCtrl', function($scope, $http)
     $http.get('appData/characters.json')
         .success(function (response) {$scope.characters = response.characters;});
 
+    $scope.selectedCrew = null;
+
 });
