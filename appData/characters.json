@@ -2,7 +2,6 @@
   {
     "id":"K35BAC001",
     "Alias":"Batman", "Name":"Bruce Wayne",
-    "affiliations":[{"crewId":1, "rank":"Leader"}],
     "imageUrl": "img/characters/BatmanAC.jpg",
     "cardUrl": "img/cards/BatmanAC.jpg",
     "weapons":[],
@@ -14,7 +13,6 @@
   {
     "id":"K35BAO001",
     "Alias":"Batman", "Name":"Bruce Wayne",
-    "affiliations":[{"crewId":1, "rank":"Leader"}],
     "imageUrl": "img/characters/BatmanAC.jpg",
     "cardUrl": "img/cards/BatmanAC.jpg",
     "weapons":[],
@@ -26,7 +24,6 @@
   {
     "id":"K35DC015",
     "Alias":"Batgirl", "Name":"Barbara Gordon",
-    "affiliations":[{"crewId":1, "rank":"Sidekick"}, {"crewId":2, "rank":"Sidekick"}],
     "imageUrl": "img/characters/BatmanAC.jpg",
     "cardUrl": "img/cards/BatmanAC.jpg",
     "weapons":[],
@@ -38,7 +35,6 @@
   {
     "id":"K35DC022",
     "Alias":"Batwoman", "Name":"Kathy Kane",
-    "affiliations":[{"crewId":1, "rank":"Sidekick"}, {"crewId":2, "rank":"Sidekick"}],
     "imageUrl": "img/characters/BatmanAC.jpg",
     "cardUrl": "img/cards/BatmanAC.jpg",
     "weapons":[],
@@ -50,7 +46,6 @@
   {
     "id":"K35BAC022",
     "Alias":"Unknown", "Name":"Agent O'Connell",
-    "affiliations":[{"crewId":1, "rank":"Henchman"}, {"crewId":2, "rank":"Henchman"}, {"crewID":3, "rank":"Henchman"}],
     "imageUrl": "img/characters/BatmanAC.jpg",
     "cardUrl": "img/cards/BatmanAC.jpg",
     "weapons":[{"weaponId":55}],
@@ -62,7 +57,6 @@
   {
     "id":"K35BAO002",
     "Alias":"Unknown", "Name":"Bane",
-    "affiliations":[{"crewId":4, "rank":"Leader"}],
     "imageUrl": "img/characters/BatmanAC.jpg",
     "cardUrl": "img/cards/BatmanAC.jpg",
     "weapons":[],
@@ -71,11 +65,11 @@
     "specialTraits":[],
     "Reputation":93, "Funding":0,
     "Willpower":7, "Strength":3, "Movement":3, "Attack":5, "Defense":3, "Endurance":8, "Special":3
-  },
+  }/*,
   {
     "id":"__",
     "Alias":"N/A", "Name":"Talia al Ghul",
-    "affiliations":[{"crewId":11, "rank":"Sidekick"}],
+
     "imageUrl": "img/characters/BatmanAC.jpg",
     "cardUrl": "img/cards/BatmanAC.jpg",
     "weapons":[],
@@ -111,4 +105,5 @@
     "Reputation":93, "Funding":0,
     "Willpower":7, "Strength":3, "Movement":3, "Attack":5, "Defense":3, "Endurance":8, "Special":3
   }
+  */
 ]}

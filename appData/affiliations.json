@@ -1,0 +1,12 @@
+{"affiliations":[
+  {"charId":"K35BAC001" ,"crewId":1, "rank":"Leader"},
+  {"charId":"K35BAO001" ,"crewId":1, "rank":"Leader"},
+  {"charId":"K35DC015" ,"crewId":1, "rank":"Sidekick"},
+  {"charId":"K35DC015" ,"crewId":2, "rank":"Sidekick"},
+  {"charId":"K35DC022" ,"crewId":1, "rank":"Sidekick"},
+  {"charId":"K35DC022" ,"crewId":2, "rank":"Sidekick"},
+  {"charId":"K35BAC022" ,"crewId":1, "rank":"Henchman"},
+  {"charId":"K35BAC022" ,"crewId":2, "rank":"Henchman"},
+  {"charId":"K35BAC022" ,"crewId":3, "rank":"Henchman"},
+  {"charId":"K35BAO002" ,"crewId":4, "rank":"Leader"}
+]}

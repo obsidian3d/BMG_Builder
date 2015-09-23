@@ -43,7 +43,12 @@
     <div>
         <span class="glyphicon glyphicon-search"></span>
         <input type="text" ng-model="searchInput">
-    </div>
+    </div>-->
+    <h5>Available {{selectedCrew.Name}} Crew Characters</h5>
+    <ul>
+        <li ng-repeat="a in affiliations | filter:{crewId:selectedCrew.id}">{{"charId: " + a.charId + " crew: " + a.crewId}}</li>
+    </ul>
+    <!--
     <table>
         <tr>
             <td></td>
@@ -59,7 +64,7 @@
             <td>Endurance</td>
             <td>Special</td>
         </tr>
-        <tr ng-repeat="x in characters | filter:searchInput | orderBy: 'Alias'">
+        <tr ng-repeat="x in charactersForCrew | orderBy: 'Alias'">
             <td>{{x.id}}</td>
             <td><a href="../{{x.imageUrl}}">{{x.Name}}</a></td>
             <td>{{ x.Alias }}</td>
