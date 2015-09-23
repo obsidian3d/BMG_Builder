@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<style>
+    table, th , td {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+    table tr:nth-child(odd) {
+        background-color: #f1f1f1;
+    }
+    table tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+
+    .floatingbox {
+        float:left;
+        border: 1px solid #333;
+        border-radius: 8px;
+        background-color: #fff;
+        margin:5px;
+        padding:5px;
+        }
+
+
+
+</style>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+    <div ng-app="myApp" ng-controller="charactersCtrl">
+
+        <table>
+            <tr>
+                <td>Case</td>
+                <td>Name</td>
+                <td>Alias</td>
+                <td>Reputation</td>
+                <td>Funding</td>
+                <td>Willpower</td>
+                <td>Strength</td>
+                <td>Movement</td>
+                <td>Attack</td>
+                <td>Defense</td>
+                <td>Endurance</td>
+                <td>Special</td>
+            </tr>
+            <tr ng-repeat="x in characters | orderBy: 'Alias'">
+                <td>{{x.id}}</td>
+                <td><a href ng-click='setSelectedCharacter(x)'>{{x.Name}}</a></td>
+                <td>{{ x.Alias }}</td>
+                <td>{{ x.Reputation }}</td>
+                <td>${{ x.Funding }}</td>
+                <td>{{ x.Willpower }}</td>
+                <td>{{ x.Strength }}+</td>
+                <td>{{ x.Movement }}</td>
+                <td>{{ x.Attack }}</td>
+                <td>{{ x.Defense }}</td>
+                <td>{{ x.Endurance }}</td>
+                <td>{{ x.Special }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="floatingbox detail">
+        <p>{{selectedCharacter.Name}}</p>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('charactersCtrl', function($scope, $http) {
+
+            $scope.selectedCharacter = "";
+
+            $http.get('appData/characters.json')
+                    .success(function (response) {$scope.characters = response.characters;});
+
+            $scope.setSelectedCharacter = function(character)
+            {
+                $scope.selectedCharacter = character;
+            }
+
+        });
+    </script>
+
+</body>
+</html>

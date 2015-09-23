@@ -1,10 +1,79 @@
-<!DOCTYPE html>
-<html>
+<html ng-app="bmgApp" ng-controller="bmgAppCtrl">
+<!--
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-Look stuff!
+    <title>BMG Crew Builder: Select a Crew!</title>
+</head>-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+    <script src="js\crewBuilder.js"></script>
+
+<style>
+    table, th , td {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+    table tr:nth-child(odd) {
+        background-color: #f1f1f1;
+    }
+    table tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+
+    a.thumb {
+        float: left;
+        margin: -0.5em 1em 1.5em 0;
+        padding-bottom: 1em;
+        height: 100px;
+        width: 200px;
+    }
+
+</style>
+
+<div>
+    <div>
+        <h5>Choose a crew: </h5>
+        <select>
+            <option ng-repeat="crew in crews | orderBy: ['Alignment','Name']">{{crew.Name}}</option>
+        </select>
+    </div>
+
+    <table>
+        <tr>
+            <td></td>
+            <td>Name</td>
+            <!--<td>Image</td>-->
+            <td>Alias</td>
+            <td>Reputation</td>
+            <td>Funding</td>
+            <td>Willpower</td>
+            <td>Strength</td>
+            <td>Movement</td>
+            <td>Attack</td>
+            <td>Defense</td>
+            <td>Endurance</td>
+            <td>Special</td>
+        </tr>
+        <tr ng-repeat="x in characters | orderBy: 'Alias'">
+            <td>{{x.id}}</td>
+            <!--<td><a href="../{{x.imageUrl}}" class="thumb"></a>Image</td>-->
+            <td><a href="../{{x.imageUrl}}">{{x.Name}}</a></td>
+            <td>{{ x.Alias }}</td>
+            <td>{{ x.Reputation }}</td>
+            <td>${{ x.Funding }}</td>
+            <td>{{ x.Willpower }}</td>
+            <td>{{ x.Strength }}+</td>
+            <td>{{ x.Movement }}</td>
+            <td>{{ x.Attack }}</td>
+            <td>{{ x.Defense }}</td>
+            <td>{{ x.Endurance }}</td>
+            <td>{{ x.Special }}</td>
+        </tr>
+    </table>
+
+</div>
+
 </body>
 </html>
